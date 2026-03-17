@@ -23,7 +23,7 @@ Edit `root-app.yaml` and `app-nginx.yaml`, replace `YOUR_USERNAME` with your Git
 ### 2. Push to GitHub
 
 ```bash
-git remote add origin https://github.com/YOUR_USERNAME/homelab-apps.git
+git remote add origin https://github.com/hbenedek/homelab-gitops.git
 git branch -M main
 git push -u origin main
 ```
@@ -32,7 +32,7 @@ git push -u origin main
 
 ```bash
 argocd app create homelab \
-  --repo https://github.com/YOUR_USERNAME/homelab-apps.git \
+  --repo https://github.com/hbenedek/homelab-gitops.git \
   --path . \
   --dest-server https://kubernetes.default.svc \
   --dest-namespace argocd
